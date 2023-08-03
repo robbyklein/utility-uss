@@ -1,3 +1,6 @@
+$specialBorderColors: "white", "black";
+$specialBorderColorValues: "#ffffff", "#000000";
+
 @each $color in $colors {
   @each $colorSize in $colorShades {
     .border-#{$color}-#{$colorSize} {
@@ -24,6 +27,33 @@
         .border-#{$direction}-#{$color}-#{$colorSize} {
           border-#{$direction}-color: var(--#{$color}-#{$colorSize});
         }
+      }
+    }
+  }
+}
+
+@for $i from 1 through length($specialBorderColors) {
+  $specialColor: nth($specialBorderColors, $i);
+  $specialColorValue: nth($specialBorderColorValues, $i);
+
+  .border-#{$specialColor} {
+    border-color: $specialColorValue;
+  }
+
+  @each $direction in $directions {
+    @if $direction == "x" {
+      .border-#{$direction}-#{$specialColor} {
+        border-left-color: $specialColorValue;
+        border-right-color: $specialColorValue;
+      }
+    } @else if $direction == "y" {
+      .border-#{$direction}-#{$specialColor} {
+        border-top-color: $specialColorValue;
+        border-bottom-color: $specialColorValue;
+      }
+    } @else {
+      .border-#{$direction}-#{$specialColor} {
+        border-#{$direction}-color: $specialColorValue;
       }
     }
   }
