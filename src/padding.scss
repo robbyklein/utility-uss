@@ -33,34 +33,30 @@ $paddingSizes: (
 );
 
 $paddingDirections: (
-  "": (
-    padding,
+  "": (padding,
   ),
-  "x": (
-    padding-left,
+  "x": (padding-left,
     padding-right,
   ),
-  "y": (
-    padding-top,
+  "y": (padding-top,
     padding-bottom,
   ),
-  "t": (
-    padding-top,
+  "t": (padding-top,
   ),
-  "r": (
-    padding-right,
+  "r": (padding-right,
   ),
-  "b": (
-    padding-bottom,
+  "b": (padding-bottom,
   ),
-  "l": (
-    padding-left,
+  "l": (padding-left,
   ),
 );
 
-@each $name, $size in $paddingSizes {
-  @each $direction, $properties in $paddingDirections {
-    .m#{$direction}-#{$name} {
+@each $name,
+$size in $paddingSizes {
+
+  @each $direction,
+  $properties in $paddingDirections {
+    .p#{$direction}-#{$name} {
       @each $property in $properties {
         #{$property}: $size;
       }

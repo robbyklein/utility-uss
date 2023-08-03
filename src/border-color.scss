@@ -1,5 +1,13 @@
+$borderDirections: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left",
+  "x": "x",
+  "y": "y"
+);
 $specialBorderColors: "white", "black";
-$specialBorderColorValues: "#ffffff", "#000000";
+$specialBorderColorValues: #ffffff, #000000;
 
 @each $color in $colors {
   @each $colorSize in $colorShades {
@@ -12,20 +20,26 @@ $specialBorderColorValues: "#ffffff", "#000000";
 // Specific border directions
 @each $color in $colors {
   @each $colorSize in $colorShades {
-    @each $direction in $directions {
-      @if $direction == "x" {
-        .border-#{$direction}-#{$color}-#{$colorSize} {
+
+    @each $shortDirection,
+    $fullDirection in $borderDirections {
+      @if $shortDirection =="x" {
+        .border-#{$shortDirection}-#{$color}-#{$colorSize} {
           border-left-color: var(--#{$color}-#{$colorSize});
           border-right-color: var(--#{$color}-#{$colorSize});
         }
-      } @else if $direction == "y" {
-        .border-#{$direction}-#{$color}-#{$colorSize} {
+      }
+
+      @else if $shortDirection =="y" {
+        .border-#{$shortDirection}-#{$color}-#{$colorSize} {
           border-top-color: var(--#{$color}-#{$colorSize});
           border-bottom-color: var(--#{$color}-#{$colorSize});
         }
-      } @else {
-        .border-#{$direction}-#{$color}-#{$colorSize} {
-          border-#{$direction}-color: var(--#{$color}-#{$colorSize});
+      }
+
+      @else {
+        .border-#{$shortDirection}-#{$color}-#{$colorSize} {
+          border-#{$fullDirection}-color: var(--#{$color}-#{$colorSize});
         }
       }
     }
@@ -40,20 +54,25 @@ $specialBorderColorValues: "#ffffff", "#000000";
     border-color: $specialColorValue;
   }
 
-  @each $direction in $directions {
-    @if $direction == "x" {
-      .border-#{$direction}-#{$specialColor} {
+  @each $shortDirection,
+  $fullDirection in $borderDirections {
+    @if $shortDirection =="x" {
+      .border-#{$shortDirection}-#{$specialColor} {
         border-left-color: $specialColorValue;
         border-right-color: $specialColorValue;
       }
-    } @else if $direction == "y" {
-      .border-#{$direction}-#{$specialColor} {
+    }
+
+    @else if $shortDirection =="y" {
+      .border-#{$shortDirection}-#{$specialColor} {
         border-top-color: $specialColorValue;
         border-bottom-color: $specialColorValue;
       }
-    } @else {
-      .border-#{$direction}-#{$specialColor} {
-        border-#{$direction}-color: $specialColorValue;
+    }
+
+    @else {
+      .border-#{$shortDirection}-#{$specialColor} {
+        border-#{$fullDirection}-color: $specialColorValue;
       }
     }
   }

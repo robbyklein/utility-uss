@@ -1,15 +1,91 @@
-.ease-linear {
-  transition-timing-function: linear;
+.ease {
+  transition-timing-function: ease;
 }
 
 .ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: ease-in;
 }
 
 .ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: ease-out;
 }
 
 .ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: ease-in-out;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+.ease-in-sine {
+  transition-timing-function: ease-in-sine;
+}
+
+.ease-out-sine {
+  transition-timing-function: ease-out-sine;
+}
+
+.ease-in-out-sine {
+  transition-timing-function: ease-in-out-sine;
+}
+
+.ease-in-cubic {
+  transition-timing-function: ease-in-cubic;
+}
+
+.ease-out-cubic {
+  transition-timing-function: ease-out-cubic;
+}
+
+.ease-in-out-cubic {
+  transition-timing-function: ease-in-out-cubic;
+}
+
+.ease-in-circ {
+  transition-timing-function: ease-in-circ;
+}
+
+.ease-out-circ {
+  transition-timing-function: ease-out-circ;
+}
+
+.ease-in-out-circ {
+  transition-timing-function: ease-in-out-circ;
+}
+
+.ease-in-elastic {
+  transition-timing-function: ease-in-elastic;
+}
+
+.ease-out-elastic {
+  transition-timing-function: ease-out-elastic;
+}
+
+.ease-in-out-elastic {
+  transition-timing-function: ease-in-out-elastic;
+}
+
+.ease-in-back {
+  transition-timing-function: ease-in-back;
+}
+
+.ease-out-back {
+  transition-timing-function: ease-out-back;
+}
+
+.ease-in-out-back {
+  transition-timing-function: ease-in-out-back;
+}
+
+.ease-in-bounce {
+  transition-timing-function: ease-in-bounce;
+}
+
+.ease-out-bounce {
+  transition-timing-function: ease-out-bounce;
+}
+
+.ease-in-out-bounce {
+  transition-timing-function: ease-in-out-bounce;
 }

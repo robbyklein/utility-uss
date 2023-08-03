@@ -1,31 +1,75 @@
-.cursor-auto {
-  cursor: auto;
-}
-
-.cursor-default {
-  cursor: default;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.cursor-wait {
-  cursor: wait;
+.cursor-arrow {
+  cursor: arrow;
 }
 
 .cursor-text {
   cursor: text;
 }
 
-.cursor-move {
-  cursor: move;
+.cursor-resize-vertical {
+  cursor: resize-vertical;
 }
 
-.cursor-help {
-  cursor: help;
+.cursor-resize-horizontal {
+  cursor: resize-horizontal;
 }
 
-.cursor-not-allowed {
-  cursor: not-allowed;
+.cursor-link {
+  cursor: link;
+}
+
+.cursor-slide-arrow {
+  cursor: slide-arrow;
+}
+
+.cursor-resize-up-right {
+  cursor: resize-up-right;
+}
+
+.cursor-resize-up-left {
+  cursor: resize-up-left;
+}
+
+.cursor-move-arrow {
+  cursor: move-arrow;
+}
+
+.cursor-rotate-arrow {
+  cursor: rotate-arrow;
+}
+
+.cursor-scale-arrow {
+  cursor: scale-arrow;
+}
+
+.cursor-arrow-plus {
+  cursor: arrow-plus;
+}
+
+.cursor-arrow-minus {
+  cursor: arrow-minus;
+}
+
+.cursor-pan {
+  cursor: pan;
+}
+
+.cursor-orbit {
+  cursor: orbit;
+}
+
+.cursor-zoom {
+  cursor: zoom;
+}
+
+.cursor-fps {
+  cursor: fps;
+}
+
+.cursor-split-resize-up-down {
+  cursor: split-resize-up-down;
+}
+
+.cursor-split-resize-left-right {
+  cursor: split-resize-left-right;
 }

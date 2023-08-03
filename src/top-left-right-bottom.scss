@@ -14,18 +14,21 @@ $sizes: (
 );
 
 $positions: (
-  "": inset,
-  "-x": left right,
-  "-y": top bottom,
-  "-t": top,
-  "-b": bottom,
-  "-l": left,
-  "-r": right,
+  "": "top" "bottom" "left" "right",
+  "-x": "left" "right",
+  "-y": "top" "bottom",
+  "-t": "top",
+  "-b": "bottom",
+  "-l": "left",
+  "-r": "right",
 );
 
-@each $size-name, $size-value in $sizes {
-  @each $pos-name, $pos-values in $positions {
-    .#{str-slice("inset", 1, 5)}#{str-slice($pos-name, 1, 1)}-#{$size-name} {
+@each $size-name,
+$size-value in $sizes {
+
+  @each $pos-name,
+  $pos-values in $positions {
+    .inset#{str-slice($pos-name, 1)}-#{$size-name} {
       @each $pos-value in $pos-values {
         #{$pos-value}: $size-value;
       }
