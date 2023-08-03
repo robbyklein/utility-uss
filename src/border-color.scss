@@ -1,0 +1,30 @@
+@each $color in $colors {
+  @each $colorSize in $colorShades {
+    .border-#{$color}-#{$colorSize} {
+      border-color: var(--#{$color}-#{$colorSize});
+    }
+  }
+}
+
+// Specific border directions
+@each $color in $colors {
+  @each $colorSize in $colorShades {
+    @each $direction in $directions {
+      @if $direction == "x" {
+        .border-#{$direction}-#{$color}-#{$colorSize} {
+          border-left-color: var(--#{$color}-#{$colorSize});
+          border-right-color: var(--#{$color}-#{$colorSize});
+        }
+      } @else if $direction == "y" {
+        .border-#{$direction}-#{$color}-#{$colorSize} {
+          border-top-color: var(--#{$color}-#{$colorSize});
+          border-bottom-color: var(--#{$color}-#{$colorSize});
+        }
+      } @else {
+        .border-#{$direction}-#{$color}-#{$colorSize} {
+          border-#{$direction}-color: var(--#{$color}-#{$colorSize});
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+$border-widths: (0, 1, 2, 4, 8);
+
+@each $width in $border-widths {
+  .border-#{$width} {
+    border-width: #{$width}px;
+  }
+
+  .border-x-#{$width} {
+    border-left-width: #{$width}px;
+    border-right-width: #{$width}px;
+  }
+
+  .border-y-#{$width} {
+    border-top-width: #{$width}px;
+    border-bottom-width: #{$width}px;
+  }
+
+  .border-b-#{$width} {
+    border-bottom-width: #{$width}px;
+  }
+
+  .border-l-#{$width} {
+    border-left-width: #{$width}px;
+  }
+
+  .border-r-#{$width} {
+    border-right-width: #{$width}px;
+  }
+
+  .border-t-#{$width} {
+    border-top-width: #{$width}px;
+  }
+}

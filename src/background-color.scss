@@ -1,0 +1,7 @@
+@each $color in $colors {
+  @each $size in $colorShades {
+    .bg-#{$color}-#{$size} {
+      background-color: var(--#{$color}-#{$size});
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "uss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass src/_main.scss dist/Utility.uss --watch --no-source-map",
+    "build": "sass src/_main.scss dist/Utility.uss -s compressed --no-source-map ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.64.2"
+  }
+}

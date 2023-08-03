@@ -1,0 +1,32 @@
+$flexBasis: (
+  "px": 1px,
+  "one-half": 50%,
+  "one-third": 33.33333%,
+  "two-thirds": 66.66667%,
+  "one-fourth": 25%,
+  "three-fourths": 75%,
+  "one-fifth": 20%,
+  "two-fifths": 40%,
+  "three-fifths": 60%,
+  "four-fifths": 80%,
+  "one-sixth": 16.66667%,
+  "five-sixths": 83.33333%,
+  "one-twelfth": 8.33333%,
+  "five-twelfths": 41.66667%,
+  "seven-twelfths": 58.33333%,
+  "nine-twelfths": 75%,
+  "eleven-twelfths": 91.66667%,
+  "full": 100%,
+);
+
+@each $size, $value in $flexBasis {
+  .basis-#{$size} {
+    flex-basis: $value;
+  }
+}
+
+@each $size, $value in $sizes {
+  .basis-#{$size} {
+    flex-basis: $value;
+  }
+}
