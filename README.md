@@ -4,8 +4,9 @@
 
 ## Differences from Tailwind CSS
 
-1. No half sizes (example: mt-0.5, px-3.5).
-2. Fractions in classes converted to words (example: h-1/3 => h-one-third)
+1. No half sizes (example: `mt-0.5`, `px-3.5`).
+2. Fractions in classes converted to words (example: `h-1/3` => `h-one-third`)
+3. font-bold and `font-italic` combined into `font-bold-italic`
 
 ## Usage
 
