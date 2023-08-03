@@ -1,6 +1,6 @@
 # Utility USS
 
-[TailwindCSS](https://tailwindcss.com) style utility classes for Unity stylesheets.
+[Tailwind CSS](https://tailwindcss.com) style utility classes for Unity stylesheets.
 
 ## Differences from Tailwind CSS
 
@@ -10,7 +10,7 @@
 
 ## Usage
 
-Copy `dist/utility.uss` over to your Unity project and include it in your UXML document.
+Copy `dist/Utility.uss` over to your Unity project and include it in your UXML document.
 
 ### Example
 
