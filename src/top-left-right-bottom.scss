@@ -1,4 +1,4 @@
-$sizes: (
+$topSizes: (
   "0": 0px,
   "1": 1px,
   "2": 2px,
@@ -15,20 +15,25 @@ $sizes: (
 
 $positions: (
   "": "top" "bottom" "left" "right",
-  "-x": "left" "right",
-  "-y": "top" "bottom",
-  "-t": "top",
-  "-b": "bottom",
-  "-l": "left",
-  "-r": "right",
+  "x": "left" "right",
+  "y": "top" "bottom",
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
 );
 
-@each $size-name,
-$size-value in $sizes {
+$class-name: null;
 
-  @each $pos-name,
-  $pos-values in $positions {
-    .inset#{str-slice($pos-name, 1)}-#{$size-name} {
+@each $size-name, $size-value in $topSizes {
+  @each $pos-name, $pos-values in $positions {
+    @if length($pos-values) > 1 {
+      $class-name: "inset-#{$pos-name}-#{$size-name}";
+    } @else {
+      $class-name: "#{nth($pos-values, 1)}-#{$size-name}";
+    }
+
+    .#{$class-name} {
       @each $pos-value in $pos-values {
         #{$pos-value}: $size-value;
       }
