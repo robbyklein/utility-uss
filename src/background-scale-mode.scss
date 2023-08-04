@@ -1,0 +1,13 @@
+.bg-stretch-to-fill {
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.bg-scale-and-crop,
+.bg-contain {
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.bg-scale-to-fit,
+.bg-cover {
+    -unity-background-scale-mode: scale-and-crop;
+}

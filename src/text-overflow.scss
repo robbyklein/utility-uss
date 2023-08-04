@@ -11,3 +11,16 @@
 .text-clip {
   text-overflow: clip;
 }
+
+
+.text-start {
+  -unity-text-overflow-position: start;
+}
+
+.text-middle {
+  -unity-text-overflow-position: middle;
+}
+
+.text-end {
+  -unity-text-overflow-position: end;
+}

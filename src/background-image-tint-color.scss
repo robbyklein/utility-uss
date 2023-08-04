@@ -1,0 +1,15 @@
+@each $color in $colors {
+    @each $size in $colorShades {
+        .bg-tint-#{$color}-#{$size} {
+            -unity-background-image-tint-color: var(--#{$color}-#{$size});
+        }
+    }
+}
+
+.bg-tint-black {
+    -unity-background-image-tint-color: #000000;
+}
+
+.bg-tint-white {
+    -unity-background-image-tint-color: #ffffff;
+}

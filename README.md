@@ -46,29 +46,16 @@ To create a production ready build run
 npm run build
 ```
 
-## Todo
+## Not implemented
 
-The following uss properties still need to be implemented:
+The following uss properties have not been implemented:
 
 ```
-rotate
-scale
-transform-origin
-translate
--unity-background-image-tint-color
--unity-background-scale-mode
--unity-font-definition
--unity-overflow-clip-box
--unity-paragraph-spacing
 -unity-slice-bottom
 -unity-slice-left
 -unity-slice-right
 -unity-slice-scale
 -unity-slice-top
--unity-text-outline
--unity-text-outline-color
--unity-text-outline-width
--unity-text-overflow-position
 ```
 
 ## Notes

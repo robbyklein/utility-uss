@@ -1,0 +1,25 @@
+$outlineSizes: 0, 1, 2, 4, 8;
+
+@each $color in $colors {
+    @each $shade in $colorShades {
+        .#{"text-outline-color-#{$color}-#{$shade}"} {
+ -unity-text-outline-color: var(--#{$color}-#{$shade});
+    }
+}
+}
+
+@each $size in $outlineSizes {
+    .#{"text-outline-width-#{$size}"} {
+ -unity-text-outline-width: #{$size}px;
+}
+}
+
+@each $color in $colors {
+    @each $shade in $colorShades {
+        @each $size in $outlineSizes {
+            .#{"text-outline-#{$color}-#{$shade}-#{$size}"} {
+ -unity-text-outline: var(--#{$color}-#{$shade}) #{$size * 1px};
+        }
+    }
+}
+}
