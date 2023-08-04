@@ -1,4 +1,39 @@
-$border-widths: (0, 1, 2, 4, 8);
+$border-widths: (
+  0,
+  2,
+  4,
+  8
+);
+
+.border {
+  border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-l {
+  border-left-width: 1px;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
 
 @each $width in $border-widths {
   .border-#{$width} {
