@@ -20,7 +20,7 @@ Copy `dist/Utility.uss` over to your Unity project and include it in your UXML d
 
   <ui:VisualElement class="w-full h-full bg-slate-300 items-center jusitfy-center">
     <ui:VisualElement class="w-48 p-12 text-center">
-        <ui:Label text="Hello world!" class="text-slate-900 text-2xl">
+        <ui:Label text="Hello world!" class="text-slate-900 text-2xl" />
     </ui:VisualElement>
   </ui:VisualElement>
 </ui:UXML>
